@@ -32,6 +32,11 @@ namespace MVCPhyndLogin.Controllers
                 {
                     return RedirectToAction("Index","Home");
                 }
+                else
+                {
+                    loginCred.LoginErrorMessage = "Wrong username or password.";
+                    return View("Index", loginCred);
+                }
             }
 
             ModelState.AddModelError(string.Empty, "Server Error. Please contact administrator.");

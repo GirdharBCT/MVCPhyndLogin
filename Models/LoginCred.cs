@@ -14,5 +14,7 @@ namespace MVCPhyndLogin.Models
         [Required(ErrorMessage = "this field is required to continue")]
 
         public string Password { get; set; }
+
+        public string LoginErrorMessage { get; set; }
     }
 }
